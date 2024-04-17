@@ -61,7 +61,7 @@ print("\nLast 5 elements:")
 print(df.tail())
 spacing()
 
-# Selecting products more expensive than 3
+# Selecting products more expensive than 49,25
 expensive_over_3 = df[df['Price'] > 49.25]
 print("\nProducts more expensive than 49.25:")
 print(expensive_over_3)
@@ -92,7 +92,7 @@ fruits_df = df[df['Product Type'] == 'Fruits'].sort_values(by='Name')
 spacing()
 
 #Sorting products by expiry date
-print("Products sorted by date: ", df.sort_values(by = 'Expiration Date'))
+print("Products sorted by date: \n", df.sort_values(by = 'Expiration Date'))
 spacing()
 
 # Displaying the sorted DataFrame for fruits
