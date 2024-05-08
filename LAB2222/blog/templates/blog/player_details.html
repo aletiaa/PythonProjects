@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA.COM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #003a7a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #003a7a;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+        }
+        table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+ .container {
+            max-width: 800px;
+            margin-top: 2rem;
+            margin-left: 20rem;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .player-details {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .player-details img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .player-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="/" style="text-decoration: none; color: white">NBA.COM</a></h1>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <h4><a href="/players/" style="color: white; margin: 10px">Players List  </a></h4>
+            <h4><a href="/teams/" style=" color: white">  Teams List</a></h4>
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="player-details">
+            {% if player.id == 1 %}
+                <img style="height: 250px; width: 250px; border: 1px solid black" src="https://image.maxpreps.io/rosters/a00a56fa-aab7-4640-8640-53e948da806a/8/2/2/822a7976-8b54-4023-a6b1-9865e88aabed/original.jpg?version=637257562783662319&width=1024&crop=1:1,smart" alt="{{ player.name }} Photo">
+            {% endif %}
+            {% if player.id == 3 %}
+                <img style="height: 250px; width: 250px; border: 1px solid black" src="https://cachedimages.podchaser.com/256x256/aHR0cHM6Ly9jcmVhdG9yLWltYWdlcy5wb2RjaGFzZXIuY29tLzE1YTMzNDNmMGU1OTk5Nzk3YmE1ZTFjNzY3M2M5ZjRlLmpwZWc%3D/aHR0cHM6Ly93d3cucG9kY2hhc2VyLmNvbS9pbWFnZXMvbWlzc2luZy1pbWFnZS5wbmc%3D" alt="{{ player.name }} Photo">
+            {% endif %}
+            {% if player.id == 2 %}
+                <img style="height: 250px; width: 250px; border: 1px solid black" src="https://i.imgur.com/QJlVWhz.jpg" alt="{{ player.name }} Photo">
+            {% endif %}
+            <ul>
+                <li><strong>Number:</strong> {{ player.number }}</li>
+                <li><strong>Name:</strong> {{ player.name }}</li>
+                <li><strong>Team:</strong> {{ player.team.name }}</li>
+                <!-- Add more properties as needed -->
+            </ul>
+        </div>
+
+    </div> <!-- End of Content Container -->
+    <div class="footer">
+        <p>&copy; 2024 NBA.COM. All rights reserved.</p>
+    </div>
+</body>
+</html>

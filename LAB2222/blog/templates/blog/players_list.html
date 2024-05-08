@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA.COM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #003a7a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #003a7a;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+        }
+        table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+.tables-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="/" style="text-decoration: none; color: white">NBA.COM</a></h1>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <h4><a href="/players/add-player" style="color: white; margin: 10px">Add a Player</a></h4>
+            <h4><a href="/teams/" style=" color: white">  Teams List</a></h4>
+        </div>
+    </div>
+    <div class="content">
+        <div class="tables-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Number</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Height</th>
+                        <th scope="col">Weight</th>
+                        <th scope="col">City</th>
+                        <th scope="col">Team</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for player in players %}
+                        <tr>
+                            <td>{{ player.number }}</td>
+                            <td><a href='{{ player.id}}'> {{ player.name }} </a></td>
+                            <td>{{ player.position }}</td>
+                            <td>{{ player.height }} cm</td>
+                            <td>{{ player.weight }} kg</td>
+                            <td>{{ player.city }}</td>
+                            <td>{{ player.team.name }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 NBA.COM. All rights reserved.</p>
+    </div>
+</body>
+</html>

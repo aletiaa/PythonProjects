@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA.COM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #003a7a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .articles {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .article-block {
+            width: calc(28% - 20px);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article-block h2 {
+            margin-top: 0;
+        }
+
+        .article-block p {
+            margin-bottom: 0;
+        }
+        .footer {
+            background-color: #003a7a;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .content {
+            padding: 20px;
+        }
+        table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  font-family: sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+caption {
+  caption-side: bottom;
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead,
+tfoot {
+  background-color: rgb(228 240 245);
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+.tables-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.article-block {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .article-block h2 {
+            margin-top: 0;
+        }
+
+        .article-block p {
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .article-block {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-block {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><a href="/" style="text-decoration: none; color: white">NBA.COM</a></h1>
+        <div style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+            <h4><a href="/players/" style="color: white; margin: 10px">Players List  </a></h4>
+            <h4><a href="/teams/" style=" color: white">  Teams List</a></h4>
+        </div>
+    </div>
+    <div class="content">
+        <div class="articles">
+                <div class="article-block">
+                    <img style="height: 280px" src="https://cdn.nba.com/manage/2024/02/darius-garland-driving-chris-paul.jpg">
+                    <h2>10 players who need to make a leap in the stretch run of 2023-24</h2>
+                    <p>The stretch run is here and these players should have pivotal roles on their teams as 2023-24 finishes.</p>
+                </div>
+             <div class="article-block">
+                   <img style="height: 280px" src="https://cdn.nba.com/manage/2024/02/victor-wembanyama-iso-looks-2.jpg">
+                    <h2>Kia Rookie Ladder: Key storylines await as Kia ROY chase resumes</h2>
+                    <p>Another Victor Wembanyama vs. Chet Holmgren showdown could have a big impact on the race in the season's final weeks.</p>
+                </div>
+             <div class="article-block">
+                    <img style="height: 280px" src="https://cdn.nba.com/manage/2024/02/clippers-new-unis-iso.jpg">
+                    <h2>Clippers unveil new unis, court and logo for next season</h2>
+                    <p>The Clippers' new uniforms, logo and court will pay homage to the team's history as it prepares to open the Intuit Dome in 2024-25.</p>
+                </div>
+        </div>
+
+
+{#        <div class="tables-container">#}
+{#            <h1>Welcome</h1>#}
+{#        </div>#}
+
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 NBA.COM. All rights reserved.</p>
+    </div>
+</body>
+</html>
