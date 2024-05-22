@@ -6,7 +6,7 @@ from statsmodels.tsa.arima.model import ARIMA
 from tabulate import tabulate  # Import the tabulate function
 
 # Step 1: Load data from CSV
-data = pd.read_csv('audi.csv', parse_dates=['Date'])
+data = pd.read_csv('lab6/audi.csv', parse_dates=['Date'])
 
 # Step 2: Set 'Date' as index
 data.set_index('Date', inplace=True)
